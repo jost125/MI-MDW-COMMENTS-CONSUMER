@@ -2,6 +2,8 @@
 <%@include file="../layout/header.jsp" %>
 <%@include file="../layout/menu.jsp" %>
 
-Hello
+<c:forEach var="thread" items="${threads}">
+	${thread.name}
+</c:forEach>
 
 <%@include file="../layout/tail.jsp" %>

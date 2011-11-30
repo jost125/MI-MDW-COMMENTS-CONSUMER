@@ -2,7 +2,6 @@ package comments.model.entities;
 
 import java.util.Date;
 import javax.persistence.Id;
-import org.codehaus.jackson.annotate.JsonBackReference;
 
 public class Thread {
 
