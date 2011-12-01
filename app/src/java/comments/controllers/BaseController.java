@@ -1,16 +1,16 @@
 package comments.controllers;
 
-import comments.api.Client;
+import comments.api.CommentsRestClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
 abstract public class BaseController {
-	private Client commentsApiClient = null;
+	private CommentsRestClient commentsApiClient = null;
 
-	public Client getCommentsApiClient() {
+	public CommentsRestClient getCommentsApiClient() {
 		if (commentsApiClient == null) {
-			commentsApiClient = new Client(new RestTemplate());
+			commentsApiClient = new CommentsRestClient(new RestTemplate());
 		}
 		return commentsApiClient;
 	}
